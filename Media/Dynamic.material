@@ -1,0 +1,191 @@
+
+material fijuuu/dyn
+{
+	technique
+	{
+		pass
+		{
+			
+			scene_blend add
+			diffuse 0.0 0.0 0.6 0.5
+			emissive 0.2 0.2 0.2 0.5
+			alpha_rejection greater_equal 128
+			cull_software none
+			cull_hardware none
+			depth_write off
+					texture_unit record_mask
+					{
+						//texture DynaTex 1d
+					}
+		}	
+	
+	}
+}
+
+material fijuuu/dynHead
+{
+            transparency_casts_shadows on
+	technique
+	{
+		pass
+		{
+			
+			//transparent track segments 
+			//
+			scene_blend add
+			diffuse 0.6 0.0 0.6 0.5
+			depth_write off
+			
+			//diffuse 1.0 1.0 1.0 0.5
+			
+			emissive 0.1 0.1 0.1 0.5
+			
+			alpha_rejection greater_equal 128
+			cull_software none
+			cull_hardware none
+					texture_unit record_mask
+					{
+						//texture DynaTex 1d
+					}
+					texture_unit static-fade
+					{
+						texture SeqHead.png 1d
+						colour_op modulate
+						tex_address_mode clamp
+					}
+		}	
+	
+	}
+}
+
+material fijuuu/dyn2
+{
+	technique
+	{
+		pass
+		{
+			diffuse 0.4 0.4 0.4 0.5
+			emissive 0.0 0.0 0.7 0.5
+			alpha_rejection greater_equal 128
+			cull_software none
+			cull_hardware none
+					texture_unit record_mask
+					{
+						//texture DynaTex 1d
+					}
+					
+		}	
+
+				pass
+				{
+					scene_blend add
+					polygon_mode points
+					point_size 2
+					emissive 0.5 0.0 1.0 0.5
+					//lighting off
+					texture_unit
+					{
+					      texture darkYellow.png
+
+					}
+				}
+		}
+}
+
+material fijuuu/dyn3
+{
+            transparency_casts_shadows on
+	technique
+	{
+				pass
+				{
+					scene_blend add 
+                                        depth_write off
+                                        diffuse 0.1 0.1 0.1
+					emissive 0.1 0.1 0.1
+					texture_unit
+					{
+					      //texture darkYellow.png
+					      //texture green.png
+                                            texture purple.png
+					}
+				}
+		pass
+		{
+			
+			//transparent track segments 
+			//
+			//scene_blend add
+			//diffuse 0.6 0.0 0.6 0.5
+			//depth_write off
+			
+			//diffuse 1.0 1.0 1.0 0.5
+			
+			emissive 0.5 0.5 0.5 0.5
+			
+			alpha_rejection greater_equal 128
+			cull_software none
+			cull_hardware none
+					texture_unit record_mask
+					{
+						//texture DynaTex 1d
+					}
+					texture_unit static-fade
+					{
+						texture SeqHead.png 1d
+						colour_op modulate
+						tex_address_mode clamp
+					}
+		}	
+		}
+}
+
+material fijuuu/torus_test
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture torus_test.png
+				filtering none
+			}
+		}
+	}
+}
+
+material fijuuu/torus_rule
+{
+	technique
+	{
+		pass
+		{
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+
+			texture_unit
+			{
+				texture torus_rule.png
+				filtering none
+			}
+		}
+	}
+}
+
+material fijuuu/dynR
+{
+	//receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit record_mask
+			{
+				//texture DynaTex 1d
+				rotate 90
+				
+			}
+		}
+	}
+}

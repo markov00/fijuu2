@@ -1,0 +1,279 @@
+fijuuu/recordOverlay
+{
+    zorder 500
+	container BorderPanel(fijuuu/recPanel)
+    {
+        metrics_mode relative
+        vert_align top 
+
+        left 0.00625  // 5/800
+        top 0.00833   // 5/600
+        width 0.9875  // 790/800
+        height 0.9833 // 590/600
+	
+	material fijuuu/record
+	// weird hack.. old size was 128
+	// 790/128=6.17   590/128=4.61
+	uv_coords 0 0 6.17 4.61
+
+	// left right top bottom
+	// 1/800 = 0.00125
+	// 1/600 = 0.00166
+	border_size 0.00125 0.00125 0.00166 0.00166
+	//border_material Core/StatsBlockBorder
+	border_material fijuuu/white
+	// default uvs are fine for this flat white border..
+    }
+}
+
+fijuuu/muteOverlay
+{
+    zorder 500
+	container BorderPanel(fijuuu/mutePanel)
+    {
+        metrics_mode relative
+        vert_align top 
+
+        left 0.1325  // 5/800
+        top 0.00933   // 5/600
+     //   width 0.9875  // 790/800
+      //  height 0.9833 // 590/600
+	
+	material fijuuu/mute
+	// weird hack.. old size was 128
+	// 790/128=6.17   590/128=4.61
+	uv_coords 0 0 6.17 4.61
+    }
+}
+
+fijuuu/logoOverlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/logoOverlayContainer)
+    { 	
+		metrics_mode relative
+
+		vert_align top
+    	//left 0.834
+    	//top 0.778
+    	left 0.825
+    	top 0.765
+
+		width 0.166
+		height 0.222
+		material fijuuu/logo
+	}
+}	
+
+fijuuu/useOverlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/useOverlayContainer)
+    { 	
+		metrics_mode relative
+
+// bottom left alignment
+//
+//		vert_align bottom
+//    	left 0.00875 
+//	// -0.4266 - 7/800
+//    	top -0.438266
+
+// top right alignment
+
+		vert_align top
+    	left 0.66 
+    	top -0.165
+
+		width 0.32 
+		height 0.4266
+		material fijuuu/padUse
+	}
+}	
+
+
+fijuuu/volumeUsageOverlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/volumeUsageOverlayContainer)
+    { 	
+		metrics_mode relative
+
+// bottom left alignment
+//
+//		vert_align bottom
+//    	left 0.00875 
+//	// -0.4266 - 7/800
+//    	top -0.438266
+
+// top right alignment
+
+		vert_align top
+    	left 0.66 
+    	top -0.165
+
+		width 0.32 
+		height 0.4266
+		material fijuuu/padUseVolume
+	}
+}	
+
+fijuuu/stretchUsageOverlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/stretchUsageOverlayContainer)
+    { 	
+		metrics_mode relative
+
+// bottom left alignment
+//
+//		vert_align bottom
+//    	left 0.00875 
+//	// -0.4266 - 7/800
+//    	top -0.438266
+
+// top right alignment
+
+		vert_align top
+    	left 0.66 
+    	top -0.165
+
+		width 0.32 
+		height 0.4266
+		material fijuuu/padUseStretch
+	}
+}	
+
+fijuuu/noiseOverlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/noiseOverlayContainer)
+    { 	
+		metrics_mode relative
+
+// bottom left alignment
+		
+		vert_align bottom
+    	left 0.011 
+    	top -0.238266
+		width 0.16
+		height 0.21.33
+		material fijuuu/noise
+	}
+}	
+
+fijuuu/boostOverlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/boostOverlayContainer)
+    { 	
+		metrics_mode relative
+
+// bottom left alignment
+		
+		vert_align bottom
+    	left 0.011 
+    	top -0.275
+		width 0.16
+		height 0.21.33
+		material fijuuu/boost
+	}
+}	
+
+fijuuu/twistCaptionOverlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/twistCaptionOverlayContainer)
+    { 	
+		metrics_mode relative
+
+// bottom left alignment
+//
+		vert_align bottom
+    	left 0.015 
+    	top -0.03
+		width 0.48 
+		height 0.6399
+		material fijuuu/twistCaption
+	}
+}	
+
+
+fijuuu/timeStretchCaptionOverlay
+{
+	zorder 400
+	container BorderPanel(fijuuu/timeStretchCaptionOverlayContainer)
+    { 	
+		metrics_mode relative
+
+// bottom left alignment
+//
+		vert_align bottom
+    	left 0.015 
+    	top -0.03
+		width 0.48 
+		height 0.6399
+		material fijuuu/timeStretchCaption
+	}
+}	
+
+
+fijuuu/soloParam1Overlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/soloParam1-graphic)
+    { 	
+		metrics_mode pixels 
+		vert_align top 
+    	left 10 
+    	top 300
+		width 128 
+		height 128
+		material fijuuu/soloParam1
+	}
+}	
+
+fijuuu/soloParam2Overlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/soloParam2-graphic)
+    { 	
+		metrics_mode pixels 
+		vert_align top 
+    	left 10 
+    	top 320
+		width 128 
+		height 128
+		material fijuuu/soloParam2
+	}
+}	
+
+fijuuu/soloParam3Overlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/soloParam3-graphic)
+    { 	
+		metrics_mode pixels 
+		vert_align top 
+    	left 10 
+    	top 340
+		width 128
+		height 128
+		material fijuuu/soloParam3
+	}
+}	
+
+fijuuu/soloParam4Overlay
+{
+	zorder 500
+	container BorderPanel(fijuuu/soloParam4-graphic)
+    { 	
+		metrics_mode pixels 
+		vert_align top 
+    	left 10
+    	top 360
+		width 128 
+		height 128
+		material fijuuu/soloParam4
+	}
+}	

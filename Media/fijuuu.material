@@ -1,0 +1,1096 @@
+material default
+{
+}
+
+material fijuuu/guide
+{
+	technique
+	{
+		pass
+		{
+			scene_blend add
+			//lighting off
+			diffuse 0.1 0.3 1 1
+			//emissive 1 1 1 
+			alpha_rejection greater 128
+			depth_write off
+			texture_unit
+			{
+				texture Guide.png
+				tex_address_mode clamp
+				
+			}
+		}
+	}
+}
+
+material fijuuu/readhead
+{
+	technique
+	{
+		pass
+		{
+		scene_blend alpha_blend 
+		depth_write off
+		//alpha_rejection greater 128
+		emissive .0 1 .0 .5
+  		lighting off
+		texture_unit
+			{
+				texture blueGrad.png 
+				scale 1 .025
+		    	filtering none
+				scroll_anim .5 .9
+			}
+		}
+		pass
+		{
+		scene_blend alpha_blend 
+		depth_write off
+		//alpha_rejection greater 128
+		emissive .0 1 .0 .5
+  		lighting off
+		texture_unit
+			{
+				scale .025 1
+				texture blueGrad.png 
+		    	filtering none
+				scroll_anim .1 .1
+				rotate 90
+			}
+		}
+		pass
+		{
+		scene_blend alpha_blend 
+		depth_write off
+		emissive .0 1 .0 .5
+  		lighting off
+		texture_unit
+			{
+				texture blueGrad.png 
+				scale 1 1
+		    	filtering none
+//				scroll_anim 0 .3
+				scroll 0.0 .4
+			}
+		}
+		pass
+		{
+		scene_blend alpha_blend 
+		depth_write off
+		emissive .0 1 .0 .5
+  		lighting off
+		texture_unit
+			{
+				texture greenGrad.png 
+				scale 1 1
+		    	filtering none
+//				scroll_anim 0 .3
+				scroll 0.0 -.4
+			}
+		}
+	}
+}
+
+material fijuuu/readhead2
+{
+	technique
+	{
+		pass
+		{
+		scene_blend alpha_blend 
+		depth_write off
+		emissive .0 1 .0 .5
+  		lighting off
+		texture_unit
+			{
+				texture blueGrad.png 
+				scale 1 1
+		    	filtering none
+//				scroll_anim 0 .3
+				scroll 0.0 .4
+			}
+		}
+		pass
+		{
+		scene_blend alpha_blend 
+		depth_write off
+		emissive .0 1 .0 .5
+  		lighting off
+		texture_unit
+			{
+				texture blueGrad.png 
+				scale 1 1
+		    	filtering none
+//				scroll_anim 0 .3
+				scroll 0.0 -.4
+			}
+		}
+		pass
+		{
+		scene_blend alpha_blend 
+		depth_write off
+		emissive .0 1 .0 .5
+		lighting off
+  		texture_unit
+			{
+				scale .03 1
+				texture blueGrad.png 
+		    	filtering none
+				scroll_anim .8 .1
+				rotate 90
+			}
+		}
+	}
+}
+
+material fijuuu/braceArm
+{
+	
+	technique
+	{
+		pass
+		{
+			//ambient 0.500000 0.500000 0.500000 1.000000
+			//diffuse 0.0000 0.000000 0.00000 1.000000
+			specular 0.000000 0.000000 0.500000 1.000000 12.500000
+			//emissive 0.000000 0.000000 1.000000 1.000000
+		}
+	}
+}
+
+material fijuuu/green_neon
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture green_neon.png 
+				
+			}
+		}
+	}
+}
+
+material fijuuu/grid
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture grid.png 
+				
+			}
+		}
+	}
+}
+
+material fijuuu/roomEnvMap
+{
+	technique
+	{
+		pass
+		{
+
+			texture_unit
+			{
+				texture  chrome.png
+			}
+
+			texture_unit
+			{
+				texture roomEnvMap.png
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map spherical
+			}
+		}
+	}
+}
+
+
+material fijuuu/hunk 
+{
+	
+	technique
+	{
+		pass
+		{
+			
+			cull_hardware none
+			cull_software none
+
+			emissive 0.0 0.0 0.0 0.5
+			texture_unit
+			{
+				texture ironOxide.png 
+				
+			}
+		}
+	}
+}
+
+material fijuuu/diver1
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture blueOxide.png 
+				
+			}
+		}
+	}
+}
+
+material fijuuu/points
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			polygon_mode points
+			point_size 2
+			emissive 0.6 0.6 0.6 0.5
+			specular 0.0 0.0 0.0 0.5
+			texture_unit
+	 		{
+ 			texture orange.png 
+ 			
+			}
+		}
+	}
+}
+material fijuuu/diver2
+{
+	technique
+	{
+		pass
+		{
+			emissive 0.2 0.0 0.0 0.5
+			specular 0.0 0.0 0.0 0.5
+			texture_unit
+			{
+				texture orange.png 
+				
+			}
+		}
+	}
+}
+
+material fijuuu/milk
+{
+	technique
+	{
+		pass
+		{
+
+//			emissive 0.2 0.0 0.0 0.5
+//			polygon_mode wireframe
+			specular 0.0 0.0 0.0 0.5
+
+			texture_unit
+			{
+				texture grid.png
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map spherical
+			}
+		}
+	}
+}
+
+material fijuuu/white
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			emissive 1 1 1 1
+		}
+	}
+}
+
+////overlays------------------------->
+
+material fijuuu/record
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			scene_blend add
+			texture_unit
+			{
+				anim_texture rec.png recoff.png 0.5 
+			
+				// not strictly necessary now..
+				tex_address_mode clamp
+				
+			}
+		}
+	}
+}
+
+material fijuuu/mute
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			scene_blend add
+			depth_write off
+			texture_unit
+			{
+				texture mute.png
+			
+				// not strictly necessary now..
+				tex_address_mode clamp
+				
+			}
+		}
+	}
+}
+
+
+material fijuuu/logo
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture logo-border.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/padUse
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture padUse.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/padUseVolume
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture padUseVolume.png
+				
+			}
+		}
+	}
+}
+material fijuuu/padUseStretch
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture padUseStretch.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/noise
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture noise.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/boost
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture boost.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/twistCaption
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture twistCaption.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/timeStretchCaption
+{
+	technique
+	{
+		pass
+		{
+		//	alpha_rejection greater 128
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture timeStretchCaption.png
+				
+			}
+		}
+	}
+}
+material fijuuu/soloParam1
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			scene_blend add
+			texture_unit
+			{
+				texture param1.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/soloParam2
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			scene_blend add
+			texture_unit
+			{
+				texture param2.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/soloParam3
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			scene_blend add
+			texture_unit
+			{
+				texture param3.png
+				
+			}
+		}
+	}
+}
+
+material fijuuu/soloParam4
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			scene_blend add
+			texture_unit
+			{
+				texture param4.png
+				
+			}
+		}
+	}
+}
+
+///// test colours (for prototyping) ----->
+
+material fijuuu/red
+{
+	
+	technique
+	{
+		pass
+		{
+			ambient 0.000000 0.000000 0.000000 1.000000
+			diffuse 1.00000 0.000000 0.000000 1.000000
+            specular 0.500000 0.50000 0.5000 1.000000 12.500000
+            emissive 1.0 0.000000 0.000000 1.000000	
+		}
+	}
+}
+
+material fijuuu/blue
+{
+	
+	technique
+	{
+		pass
+		{
+			ambient 0.500000 0.500000 0.500000 1.000000
+			diffuse 0.0000 0.000000 1.00000 1.000000
+			specular 0.500000 0.500000 0.500000 1.000000 12.500000
+			emissive 0.000000 0.000000 1.000000 1.000000
+		}
+	}
+}
+
+material fijuuu/green
+{
+	
+	technique
+	{
+		pass
+		{
+			ambient 0.500000 0.500000 0.500000 1.000000
+			diffuse 0.00000 1.0000 0.000000 1.000000
+			specular 0.500000 0.500000 0.500000 1.000000 12.500000
+			emissive 0.000000 1.000000 0.000000 1.000000
+		}
+	}
+}
+material fijuuu/bluewire
+{
+	
+	technique
+	{
+		pass
+		{
+	polygon_mode wireframe
+			ambient 0.500000 0.500000 0.500000 1.000000
+			diffuse 0.054253 0.000000 0.800000 1.000000
+			specular 0.500000 0.500000 0.500000 1.000000 12.500000
+			emissive 0.000000 0.000000 0.000000 1.000000
+		}
+	}
+}
+
+material fijuuu/orbs
+{
+	technique
+	{
+		pass
+		{
+//			lighting off
+// with scene_blend off and depth_write off very weird effects can be acheived w// when rendering over an obj with this material over other objects in the scene
+
+			scene_blend add 
+			depth_write off
+
+			texture_unit
+			{
+				texture flare.png
+				env_map planar
+			}
+		}
+	}
+}
+
+
+material fijuuu/xform
+{
+	technique
+	{
+		pass
+		{
+//			lighting off
+			scene_blend add 
+			depth_write off
+
+			texture_unit
+			{
+				texture flare.png
+				wave_xform scroll_x sine 0.0 0.02 0.0 5.0
+				env_map planar
+			}
+		}
+	}
+}
+
+material fijuuu/xform2
+{
+	technique
+	{
+		pass
+		{
+//			lighting off
+			scene_blend add 
+			depth_write off
+
+			texture_unit
+			{
+			       //texture dota2.png
+				texture dota_bw.png
+				//wave_xform scroll_x sine 0.0 0.02 0.0 5.0
+				wave_xform scroll_y sine 0.0 0.02 0.0 1.0
+				//wave_xform scale_y sine 0.0 0.2 1.0 5.0
+				wave_xform rotate sine 0.0 0.02 0.0 1.0
+				env_map planar
+			}
+		}
+	}
+}
+
+material fijuuu/xform3
+{
+	technique
+	{
+		pass
+		{
+//			lighting off
+			scene_blend add 
+			depth_write off
+
+			texture_unit
+			{
+				texture flare.png
+				//wave_xform scroll_x sine 0.0 0.02 0.0 5.0
+				wave_xform scroll_y sine 0.0 0.02 0.0 1.0
+				//wave_xform scale_y sine 0.0 0.2 1.0 5.0
+				wave_xform rotate sine 0.0 0.02 0.0 1.0
+				env_map planar
+			}
+		}
+	}
+}
+
+material fijuuu/xform4
+{
+	technique
+	{
+		pass
+		{
+//			lighting off
+			scene_blend add 
+			depth_write off
+
+			texture_unit
+			{
+				texture dota2.png
+				wave_xform scroll_x sine 1.0 0.02 0.0 0.5
+				//wave_xform scroll_y sine 0.0 0.02 0.0 1.0
+				//wave_xform scale_y sine 0.0 0.2 1.0 5.0
+				wave_xform rotate sine 0.0 0.02 0.0 1.0
+				env_map planar
+			}
+		}
+	}
+}
+
+material fijuuu/xform5
+{
+	technique
+	{
+		pass
+		{
+//			lighting off
+			scene_blend add 
+			depth_write off
+
+			texture_unit
+			{
+				texture dota3.png
+				wave_xform scroll_x sine 1.0 0.02 0.0 0.5
+				//wave_xform scroll_y sine 0.0 0.02 0.0 1.0
+				//wave_xform scale_y sine 0.0 0.2 1.0 5.0
+				wave_xform rotate sine 0.0 0.02 0.0 1.0
+			}
+		}
+	}
+}
+
+material fijuuu/xform6
+{
+	technique
+	{
+		pass
+		{
+//			lighting off
+//			scene_blend add 
+//			depth_write off
+
+			texture_unit
+			{
+				texture dota4.png
+				wave_xform scroll_x sine 1.0 0.02 3 5.0
+//				wave_xform rotate sine 0.0 0.02 0.0 1.0
+				scale .3 .3
+
+			}
+		}
+	}
+}
+
+material fijuuu/select 
+{
+        technique
+        {
+                pass
+                {
+		//scene_blend add
+
+                        texture_unit
+                        {
+						  texture select2.png
+							//	emissive .5 .5 .5 
+				env_map spherical
+				scroll_anim 0.8 0.4
+                        }
+
+                }
+        }
+}
+
+material fijuuu/gold
+{
+        technique
+        {
+                pass
+                {
+                        texture_unit
+                        {
+						  texture gold.png
+							//	emissive .5 .5 .5 
+				env_map spherical
+                        }
+
+                }
+        }
+}
+
+fragment_program Ogre/Compositor/GlassFP cg
+{
+	source GlassFP.cg
+	entry_point main_ps
+	profiles ps_2_0 arbfp1
+}
+
+material fijuuu/video
+{
+	technique
+	{
+		pass
+		{
+			depth_check off
+
+			vertex_program_ref Ogre/Compositor/StdQuad_vp
+			{
+			}
+
+			fragment_program_ref Ogre/Compositor/GlassFP
+			{
+			}
+
+			texture_unit RT
+			{
+                tex_coord_set 0
+				tex_address_mode clamp
+				filtering linear linear linear
+			}
+
+			texture_unit
+			{
+				//texture WaterNormal1.tga 2d
+				texture video1.tga 2d
+                tex_coord_set 1
+				//tex_address_mode clamp
+				filtering linear linear linear
+			}
+		}
+	}
+}
+
+fragment_program farkedFP cg
+{
+	source farkedFP.cg
+	entry_point farked_ps
+	profiles ps_2_0 arbfp1
+}
+
+material fijuuu/farked
+{
+    technique
+    {
+
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			depth_func always_pass
+
+			vertex_program_ref Ogre/Compositor/StdQuad_Tex2a_vp
+			{
+			}
+
+			fragment_program_ref farkedFP
+			{
+				param_named_auto time_cycle_period time 20
+				param_named flicker float 0.4
+				param_named DirtFrequency float 0.0005
+				//param_named luminance float3 0.30f 0.59f 0.11f
+				param_named luminance float3 0.10f 0.7f 0.6f
+				param_named frameJitter float 0.004
+				param_named lumiShift float 0.03
+			}
+
+			texture_unit RT
+			{
+                tex_coord_set 0
+				tex_address_mode clamp
+				filtering trilinear
+			}
+
+			texture_unit SplotchesTx
+			{
+				texture txt.png 2d
+                tex_coord_set 1
+				tex_address_mode wrap
+				filtering trilinear
+			}
+
+			texture_unit
+			{
+				texture 1D_Noise.png 1d
+                tex_coord_set 2
+				tex_address_mode wrap
+				filtering point point none
+			}
+
+
+			texture_unit SepiaTx
+			{
+				texture Sepia1D.tga 1d
+                tex_coord_set 3
+				tex_address_mode mirror
+				filtering point point none
+			}
+
+		}
+	}
+}
+
+fragment_program oldfarkedFP cg
+{
+	source oldfarkedFP.cg
+	entry_point farked_ps
+	profiles ps_2_0 arbfp1
+}
+
+
+//shamelessly copied and adapted from the 'Old Movie' Ogre compositor demo
+material fijuuu/oldfarked
+{
+    technique
+    {
+
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			depth_func always_pass
+
+			vertex_program_ref Ogre/Compositor/StdQuad_Tex2a_vp
+			{
+			}
+
+			fragment_program_ref oldfarkedFP
+			{
+				param_named_auto time_cycle_period time 20
+				param_named flicker float 0.4
+				param_named DirtFrequency float 0.0005
+				//param_named luminance float3 0.30f 0.59f 0.11f
+				param_named luminance float3 0.10f 0.7f 0.6f
+				param_named frameJitter float 0.004
+				param_named lumiShift float 0.03
+			}
+
+			texture_unit RT
+			{
+                tex_coord_set 0
+				tex_address_mode clamp
+				filtering trilinear
+			}
+
+			texture_unit SplotchesTx
+			{
+				texture txt.png 2d
+                tex_coord_set 1
+				tex_address_mode wrap
+				filtering trilinear
+			}
+
+			texture_unit
+			{
+				texture 1D_Noise.png 1d
+                tex_coord_set 2
+				tex_address_mode wrap
+				filtering point point none
+			}
+
+
+			texture_unit 1dBlueTx
+			{
+				texture blue1d.tga 1d
+                tex_coord_set 3
+				tex_address_mode mirror
+				filtering point point none
+			}
+
+		}
+	}
+}
+
+// shamlessly copied from an old ogre GLSL demo 
+
+vertex_program fijuuu/XrayVS glsl
+{ 
+	source xray.vert 
+	
+	default_params
+	{
+            param_named_auto eyePosition camera_position_object_space
+	}
+} 
+
+
+// GLSL X-ray 
+fragment_program fijuuu/XrayFS glsl 
+{ 
+	source xray.frag 
+} 
+
+material fijuuu/Xray
+{ 
+	technique 
+	{ 
+		pass 
+		{ 
+			//scene_blend alpha_blend
+			scene_blend add
+			cull_hardware none
+			cull_software none
+			depth_write off
+			depth_check off
+			vertex_program_ref fijuuu/XrayVS
+			{
+			
+			} 
+
+			fragment_program_ref fijuuu/XrayFS 
+			{ 
+				param_named edgefalloff float 0.8
+				param_named color float4 0.1, 0.2, 0.7, 0
+			} 
+		} 
+        pass
+        {
+		scene_blend add 
+		diffuse .3 .3 .5 .5
+            texture_unit
+            {
+   	        texture greenGrad.png
+			//emissive .5 0 0
+			env_map planar
+			rotate 90
+			scroll_anim 0.6 0
+                        }
+
+       }
+	} 
+} 
+
+material fijuuu/Xray2
+{ 
+	technique 
+	{ 
+		pass 
+		{ 
+			//scene_blend alpha_blend
+			scene_blend add
+			cull_hardware none
+			cull_software none
+			depth_write off
+		//	depth_check off
+			vertex_program_ref fijuuu/XrayVS
+			{
+			
+			} 
+
+			fragment_program_ref fijuuu/XrayFS 
+			{ 
+				param_named edgefalloff float 0.8
+				param_named color float4 0.1, 0.2, 0.7, 0
+			} 
+		} 
+	} 
+} 
