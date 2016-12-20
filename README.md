@@ -27,7 +27,7 @@ thanks:
 licensing:
 	
 	this program is distributed under the terms of the Gnu General Public License,
-	see the file COPYING for details.
+	see the file LICENSE for details.
 
 
 requirements:
